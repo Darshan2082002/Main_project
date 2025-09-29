@@ -13,4 +13,5 @@ for genere in genres:
     folder=os.path.join(data_set,genere)
     for filename in os.listdir(folder):
         file_path=os.path.join(folder,filename)
+        y_audio, sr = librosa.load(file_path, duration=30, sr=22050)
         
